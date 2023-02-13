@@ -1,0 +1,60 @@
+:root {
+	--clr-bg: #ffffff;
+	--clr-num: #a9f9e0;
+	--clr-dot: #fcf6bd;
+	--clr-operator: #d9c1f9;
+	--clr-clear: #d6c5d3;
+	--clr-equal: #d0f4de;
+	--clr-text: #000000;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+}
+
+.calculator {
+	display: grid;
+	grid-template-areas:
+		"screen screen  screen  screen"
+		"ac     ac      ac     divide"
+		"one    two     three   multiply"
+		"four   five    six     subtract"
+		"seven  eight   nine    add"
+		"dot    zero    equal   equal";
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.5rem;
+
+	width: 100%;
+	max-width: 320px;
+	height: 400px;
+}
+input {
+	font-size: 1.25rem;
+	height: 2.25rem;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+button {
+	border: none;
+	border-radius: 1rem;
+	font-size: 1rem;
+  cursor:pointer
+}
+
+input:focus {
+	outline: none;
+}
